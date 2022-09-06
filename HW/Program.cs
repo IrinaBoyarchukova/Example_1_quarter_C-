@@ -17,5 +17,30 @@ string[] NewString (string[] array)
     return changedArray;
 }
 
+string[] FillArray (int count)
+{
+    string[] newArray = new string[count];
+    for (int i=0; i<count; i++)
+    {
+        Console.WriteLine ("Заполните массив элемент массива: ");
+        newArray[i] = Console.ReadLine();
+    }
+    return newArray;
+}
+
+void PrintArray (string[] array)
+{
+    for (int i=0; i<array.Length; i++)
+    {
+        Console.Write ($" {array[i]} ");
+    }
+}
 
 
+Console.WriteLine ("Введите количество элементов в массиве");
+int a = int.Parse(Console.ReadLine());
+
+string[] newArray = FillArray(a);
+string[] changedArray = NewString(newArray);
+
+PrintArray(changedArray);
